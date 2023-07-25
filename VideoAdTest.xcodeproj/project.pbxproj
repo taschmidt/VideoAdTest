@@ -10,7 +10,10 @@
 		92FDC90E2A701F7200A45EB3 /* VideoAdTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDC90D2A701F7200A45EB3 /* VideoAdTestApp.swift */; };
 		92FDC9102A701F7200A45EB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDC90F2A701F7200A45EB3 /* ContentView.swift */; };
 		92FDC9122A701F7300A45EB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92FDC9112A701F7300A45EB3 /* Assets.xcassets */; };
-		92FDC9152A701F7300A45EB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92FDC9142A701F7300A45EB3 /* Preview Assets.xcassets */; };
+		92FDC91D2A701FA600A45EB3 /* GoogleInteractiveMediaAds in Frameworks */ = {isa = PBXBuildFile; productRef = 92FDC91C2A701FA600A45EB3 /* GoogleInteractiveMediaAds */; };
+		92FDC9242A7020FC00A45EB3 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDC9232A7020FC00A45EB3 /* VideoView.swift */; };
+		92FDC9282A70220800A45EB3 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDC9262A70220800A45EB3 /* VideoPlayerViewController.swift */; };
+		92FDC9292A70220800A45EB3 /* VideoPlayerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDC9272A70220800A45EB3 /* VideoPlayerWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,7 +21,9 @@
 		92FDC90D2A701F7200A45EB3 /* VideoAdTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoAdTestApp.swift; sourceTree = "<group>"; };
 		92FDC90F2A701F7200A45EB3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		92FDC9112A701F7300A45EB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		92FDC9142A701F7300A45EB3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		92FDC9232A7020FC00A45EB3 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		92FDC9262A70220800A45EB3 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		92FDC9272A70220800A45EB3 /* VideoPlayerWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92FDC91D2A701FA600A45EB3 /* GoogleInteractiveMediaAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,20 +57,22 @@
 		92FDC90C2A701F7200A45EB3 /* VideoAdTest */ = {
 			isa = PBXGroup;
 			children = (
-				92FDC90D2A701F7200A45EB3 /* VideoAdTestApp.swift */,
-				92FDC90F2A701F7200A45EB3 /* ContentView.swift */,
+				92FDC9252A7021FE00A45EB3 /* Player */,
 				92FDC9112A701F7300A45EB3 /* Assets.xcassets */,
-				92FDC9132A701F7300A45EB3 /* Preview Content */,
+				92FDC90F2A701F7200A45EB3 /* ContentView.swift */,
+				92FDC90D2A701F7200A45EB3 /* VideoAdTestApp.swift */,
+				92FDC9232A7020FC00A45EB3 /* VideoView.swift */,
 			);
 			path = VideoAdTest;
 			sourceTree = "<group>";
 		};
-		92FDC9132A701F7300A45EB3 /* Preview Content */ = {
+		92FDC9252A7021FE00A45EB3 /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				92FDC9142A701F7300A45EB3 /* Preview Assets.xcassets */,
+				92FDC9262A70220800A45EB3 /* VideoPlayerViewController.swift */,
+				92FDC9272A70220800A45EB3 /* VideoPlayerWrapper.swift */,
 			);
-			path = "Preview Content";
+			path = Player;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = VideoAdTest;
+			packageProductDependencies = (
+				92FDC91C2A701FA600A45EB3 /* GoogleInteractiveMediaAds */,
+			);
 			productName = VideoAdTest;
 			productReference = 92FDC90A2A701F7200A45EB3 /* VideoAdTest.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 92FDC9012A701F7200A45EB3;
+			packageReferences = (
+				92FDC91B2A701FA600A45EB3 /* XCRemoteSwiftPackageReference "google-ima-sdk-xc" */,
+			);
 			productRefGroup = 92FDC90B2A701F7200A45EB3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,7 +139,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92FDC9152A701F7300A45EB3 /* Preview Assets.xcassets in Resources */,
 				92FDC9122A701F7300A45EB3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92FDC9242A7020FC00A45EB3 /* VideoView.swift in Sources */,
+				92FDC9282A70220800A45EB3 /* VideoPlayerViewController.swift in Sources */,
 				92FDC9102A701F7200A45EB3 /* ContentView.swift in Sources */,
 				92FDC90E2A701F7200A45EB3 /* VideoAdTestApp.swift in Sources */,
+				92FDC9292A70220800A45EB3 /* VideoPlayerWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +298,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
 			};
 			name = Debug;
 		};
@@ -308,6 +325,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
 			};
 			name = Release;
 		};
@@ -333,6 +351,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		92FDC91B2A701FA600A45EB3 /* XCRemoteSwiftPackageReference "google-ima-sdk-xc" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rashadatjou/google-ima-sdk-xc";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		92FDC91C2A701FA600A45EB3 /* GoogleInteractiveMediaAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92FDC91B2A701FA600A45EB3 /* XCRemoteSwiftPackageReference "google-ima-sdk-xc" */;
+			productName = GoogleInteractiveMediaAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 92FDC9022A701F7200A45EB3 /* Project object */;
 }
